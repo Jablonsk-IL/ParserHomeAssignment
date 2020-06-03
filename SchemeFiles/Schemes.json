@@ -1,0 +1,84 @@
+{
+	"MPC" : 
+	{
+		"Validators" : [
+			"ExactValueValidator" : 
+			{
+				"key" : "{CityCode}",
+				"targetValue" : "LAS"
+			}
+		],
+		"Parsers" : [
+			"SetDefaultAction" : 
+			{
+				"outputKey" : "accurate"
+				"value" : false
+			},
+			"SetByIntRangeAction" :
+			{
+				"expression" : "{consistency}"
+				"outputKey" : "accurate"
+				"value" : true
+				"min" : 6
+				"max" : null
+				"isMinExclusive" : true
+				"isMaxExclusive" : false
+			},
+			"SetByIntRangeAction" :
+			{
+				"expression" : "{consistency}*{conf}"
+				"outputKey" : "accurate"
+				"value" : true
+				"min" : 20
+				"max" : null
+				"isMinExclusive" : true
+				"isMaxExclusive" : false
+			}
+		]
+	},
+	"RLT" : 
+	{
+		"Validators" : [
+			"ExactValueValidator" : 
+			{
+				"key" : "{region}",
+				"targetValue" : "VEGAS"
+			}
+		],
+		"Parsers" : [
+			"SetDefaultAction" : 
+			{
+				"outputKey" : "accurate"
+				"value" : false
+			},
+			"SetByIntRangeAction" :
+			{
+				"inputExpression" : "{accuracy}"
+				"outputKey" : "accurate"
+				"value" : true
+				"min" : 6
+				"max" : null
+				"isMinExclusive" : true
+				"isMaxExclusive" : false
+			},
+			"SetByIntRangeAction" :
+			{
+				"inputExpression" : "{accuracy}*{confidence}"
+				"outputKey" : "accurate"
+				"value" : true
+				"min" : 20
+				"max" : null
+				"isMinExclusive" : true
+				"isMaxExclusive" : false
+			}
+			"PassFieldAction" :
+			{
+				"inputExpression" : "{vehicle_id}"
+				"outputKey" : "vehicle_identification"
+			}
+		]
+	}
+	
+	
+	
+}

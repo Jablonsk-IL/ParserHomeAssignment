@@ -1,0 +1,9 @@
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\obj\Debug\IncidentParserEngine.csprojAssemblyReference.cache
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\obj\Debug\IncidentParserEngine.csproj.CoreCompileInputs.cache
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\bin\Debug\IncidentParserEngine.dll
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\bin\Debug\IncidentParserEngine.pdb
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\obj\Debug\IncidentParserEngine.dll
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\obj\Debug\IncidentParserEngine.pdb
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mason\source\repos\WaycareHomeAssignment\IncidentParserEngine\obj\Debug\IncidentParserEngine.csproj.CopyComplete
