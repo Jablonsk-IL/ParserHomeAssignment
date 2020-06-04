@@ -6,3 +6,9 @@ Common/obj/
 .vs/
 
 IncidentParserEngine/bin/
+
+IncidentParserEngine/obj/
+
+WaycareHomeAssignmentApplication/bin/
+
+WaycareHomeAssignmentApplication/obj/
