@@ -10,15 +10,15 @@ namespace IncidentParserEngine.ParseActions
     /// <summary>
     /// Simple parser passing field from input event into output event keeping the original value
     /// </summary>
-    class PassFieldAction : ParsingAction
+    class PassFieldAction : ExpressionBasedParsingAction
     {
         public PassFieldAction(string inputExpression, string outputKey) : base(inputExpression, outputKey)
         {
         }
 
-        protected override void RunParser(string input, IIncidentObject outputObject)
+        protected override void RunParser(IIncidentObject outputObject, string input)
         {
-            outputObject.SetObject(outputKey, input);
+            SetValue(outputObject, input);
         }
     }
 }

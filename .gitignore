@@ -4,3 +4,5 @@ Common/bin/
 Common/obj/
 
 .vs/
+
+IncidentParserEngine/bin/

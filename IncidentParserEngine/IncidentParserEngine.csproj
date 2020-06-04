@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParseActions\ConvertDateAction.cs" />
+    <Compile Include="ParseActions\ExpressionBasedParsingAction.cs" />
     <Compile Include="ParseActions\ParsingAction.cs" />
     <Compile Include="ParseActions\PassFieldAction.cs" />
     <Compile Include="ParseActions\SetByIntRangeAction.cs" />

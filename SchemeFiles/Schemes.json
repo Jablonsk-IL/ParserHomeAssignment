@@ -11,27 +11,27 @@
 		"Parsers" : [
 			"SetDefaultAction" : 
 			{
-				"outputKey" : "accurate"
+				"outputKey" : "accurate",
 				"value" : false
 			},
 			"SetByIntRangeAction" :
 			{
-				"expression" : "{consistency}"
-				"outputKey" : "accurate"
-				"value" : true
-				"min" : 6
-				"max" : null
-				"isMinExclusive" : true
+				"expression" : "{consistency}",
+				"outputKey" : "accurate",
+				"value" : true,
+				"min" : 6,
+				"max" : null,
+				"isMinExclusive" : true,
 				"isMaxExclusive" : false
 			},
 			"SetByIntRangeAction" :
 			{
-				"expression" : "{consistency}*{conf}"
-				"outputKey" : "accurate"
-				"value" : true
-				"min" : 20
-				"max" : null
-				"isMinExclusive" : true
+				"expression" : "{consistency}*{conf}",
+				"outputKey" : "accurate",
+				"value" : true,
+				"min" : 20,
+				"max" : null,
+				"isMinExclusive" : true,
 				"isMaxExclusive" : false
 			}
 		]
@@ -48,33 +48,45 @@
 		"Parsers" : [
 			"SetDefaultAction" : 
 			{
-				"outputKey" : "accurate"
+				"outputKey" : "accurate",
 				"value" : false
 			},
 			"SetByIntRangeAction" :
 			{
-				"inputExpression" : "{accuracy}"
-				"outputKey" : "accurate"
-				"value" : true
-				"min" : 6
-				"max" : null
-				"isMinExclusive" : true
+				"inputExpression" : "{accuracy}",
+				"outputKey" : "accurate",
+				"value" : true,
+				"min" : 6,
+				"max" : null,
+				"isMinExclusive" : true,
 				"isMaxExclusive" : false
 			},
 			"SetByIntRangeAction" :
 			{
-				"inputExpression" : "{accuracy}*{confidence}"
-				"outputKey" : "accurate"
-				"value" : true
-				"min" : 20
-				"max" : null
-				"isMinExclusive" : true
+				"inputExpression" : "{accuracy}*{confidence}",
+				"outputKey" : "accurate",
+				"value" : true,
+				"min" : 20,
+				"max" : null,
+				"isMinExclusive" : true,
 				"isMaxExclusive" : false
-			}
+			},
 			"PassFieldAction" :
 			{
-				"inputExpression" : "{vehicle_id}"
+				"inputExpression" : "{vehicle_id}",
 				"outputKey" : "vehicle_identification"
+			},
+			"ConvertDateAction" : 
+			{
+				"inputExpression" : "{create_time}",
+				"outputKey" : "creationTime",
+				"outputFormat" : "days"
+			},
+			"ConvertDateAction" : 
+			{
+				"inputExpression" : "{initial_dispatch_time}",
+				"outputKey" : "reactionTime",
+				"outputFormat" : "days"
 			}
 		]
 	}

@@ -10,7 +10,7 @@ namespace IncidentParserEngine.ParseActions
     /// <summary>
     /// Sets a default value to output field
     /// </summary>
-    class SetDefaultAction : ParsingAction
+    class SetDefaultAction : ExpressionBasedParsingAction
     {
         string defaultValue;
 
@@ -19,9 +19,9 @@ namespace IncidentParserEngine.ParseActions
             this.defaultValue = defaultValue;
         }
 
-        protected override void RunParser(string input, IIncidentObject outputObject)
+        protected override void RunParser(IIncidentObject outputObject, string input)
         {
-            outputObject.SetObject(outputKey, defaultValue);
+            SetValue(outputObject, defaultValue);
         }
     }
 }

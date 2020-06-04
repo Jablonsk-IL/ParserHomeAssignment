@@ -10,7 +10,7 @@ namespace IncidentParserEngine.ParseActions
     /// <summary>
     /// Action class returning whether int input is in range defined by schema
     /// </summary>
-    class SetByIntRangeAction : ParsingAction
+    class SetByIntRangeAction : ExpressionBasedParsingAction
     {
         int? min;
         int? max;
@@ -28,7 +28,7 @@ namespace IncidentParserEngine.ParseActions
             this.value = value;
         }
 
-        protected override void RunParser(string input, IIncidentObject outputObject)
+        protected override void RunParser(IIncidentObject outputObject, string input)
         {
             int inputValue = FormattingUtilities.ParseinputExpressionToNumericValue<int>(input);
             if (IsEqualValidBoundry(inputValue))
@@ -67,7 +67,7 @@ namespace IncidentParserEngine.ParseActions
 
         private void SetValue(IIncidentObject outputObject)
         {
-            outputObject.SetObject(outputKey, value);
+            SetValue(outputObject, value);
         }
     }
 }
