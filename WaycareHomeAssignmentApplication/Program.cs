@@ -16,7 +16,10 @@ namespace WaycareHomeAssignmentApplication
         const string path1 = @"C:\Users\Mason\Desktop\Home Assignment Python\accident1.json";
         const string path2 = @"C:\Users\Mason\Desktop\Home Assignment Python\accident2.json";
 
-        // example code using the parser to index into mongo, 
+        /// <summary>
+        ///  example code using the parser to index into mongo
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             DBAdapter mongoAdapter = new MongoAdapter();

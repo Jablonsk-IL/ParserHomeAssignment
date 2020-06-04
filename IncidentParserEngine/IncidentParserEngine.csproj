@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ParseActions\ParsingAction.cs" />
+    <Compile Include="ParseActions\PassFieldAction.cs" />
+    <Compile Include="ParseActions\SetByIntRangeAction.cs" />
     <Compile Include="ParseActions\SetDefaultAction.cs" />
     <Compile Include="SchemeData\Schema.cs" />
     <Compile Include="SchemeData\Agency.cs" />
@@ -56,7 +58,6 @@
     <Compile Include="Validators\IValidator.cs" />
     <Compile Include="MainParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ParseActions\SetByRange.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
