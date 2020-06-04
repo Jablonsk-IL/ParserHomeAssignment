@@ -9,14 +9,12 @@ namespace IncidentParserEngine.ParseActions
 {
 
     /// <summary>
-    /// base parsing action class, deriving classes represent a parsing action, and are responsible to 
-    /// update the corresponding field in the output object
+    /// Base action class for all parsers using a simple single value input expression
     /// </summary>
     abstract class ExpressionBasedParsingAction : ParsingAction
     {
         private string inputExpression;
         
-
         protected ExpressionBasedParsingAction(string inputExpression, string outputKey) : base (outputKey)
         {
             this.inputExpression = inputExpression;
